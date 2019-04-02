@@ -8,13 +8,13 @@ namespace HackerRank._0419
     {
         public static void Execute()
         {
-            TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
+            TextWriter textWriter = new StreamWriter(Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
 
-            int n = Convert.ToInt32(Console.ReadLine());
+            var n = Convert.ToInt32(Console.ReadLine());
 
-            int[] scores = Array.ConvertAll(Console.ReadLine().Split(' '), scoresTemp => Convert.ToInt32(scoresTemp))
+            var scores = Array.ConvertAll(Console.ReadLine().Split(' '), scoresTemp => Convert.ToInt32(scoresTemp))
                 ;
-            int[] result = breakingRecords(scores);
+            var result = breakingRecords(scores);
 
             textWriter.WriteLine(string.Join(" ", result));
 
